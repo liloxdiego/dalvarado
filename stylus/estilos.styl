@@ -2,51 +2,456 @@
 @import "normalize.styl"
 @import "fonts.styl"
 
-azul_oscuro = #31363D
+@font-face
+	font-family AllanBold
+	font-style normal
+	src url(../fonts/Allan/Allan-Bold.ttf)
+@font-face
+	font-family AllanRegular
+	font-style normal
+	src url(../fonts/Allan/Allan-Regular.ttf)
+@font-face
+	font-family Anton
+	font-style normal
+	src url(../fonts/Anton/Anton.ttf)
+@font-face
+	font-family Bangers
+	font-style normal
+	src url(../fonts/Bangers/Bangers.ttf)
+@font-face
+	font-family Bowlby
+	font-style normal
+	src url(../fonts/Bowlby_One_SC/BowlbyOneSC-Regular.ttf)
+@font-face
+	font-family Anton
+	font-style normal
+	src url(../fonts/Anton/Anton.ttf)
+@font-face
+	font-family FrancoisOne
+	font-style normal
+	src url(../fonts/Francois_One/FrancoisOne.ttf)
+@font-face
+	font-family LondrinaSolid
+	font-style normal
+	src url(../fonts/Londrina_Solid/LondrinaSolid-Regular.ttf)
+@font-face
+	font-family LuckiestGuy
+	font-style normal
+	src url(../fonts/Luckiest_Guy/LuckiestGuy.ttf)							
+@font-face
+	font-family MouseMemoirs
+	font-style normal
+	src url(../fonts/Mouse_Memoirs/MouseMemoirs-Regular.ttf)
+@font-face
+	font-family Overlock
+	font-style normal
+	src url(../fonts/Overlock_SC/OverlockSC-Regular.ttf)
+@font-face
+	font-family SansNarrowBold
+	font-style normal
+	src url(../fonts/PT_Sans_Narrow/PT_Sans-Narrow-Web-Bold.ttf)
+@font-face
+	font-family SansNarrowRegular
+	font-style normal
+	src url(../fonts/PT_Sans_Narrow/PT_Sans-Narrow-Web-Regular.ttf)
+@font-face
+	font-family Satisfy
+	font-style normal
+	src url(../fonts/Satisfy/Satisfy-Regular.ttf)			
 
-body
-	font-size 16px
-header
-	background azul_oscuro
-a
-	text-decoration none
-.relative
-	position relative	
-.menu
-	display none
-.btn-menu
-	color white
-	font-size 2.5em	
-.me
-	position relative	
-.about-me
-	background azul_oscuro
-	color white
-.center
+azul_oscuro = #31363D
+celeste_claro = #00A3FF
+celeste_mas_claro = #9EDCFF
+celeste_oscuro = #186B99
+rojo_claro = rgb(199, 106, 106)
+rojo_etic = #E3003D
+rojo_fuerte = #CC181E
+verde_claro = #88C44A
+gris_claro = #888
+azul_mas_oscuro = #0B4B7B
+rosado = #C1348B
+
+.center-txt
 	text-align center
-.txt-1
-	font-size 1.3em
-.txt-2
-	margin-top 0
-	margin-bottom 0
-.slide-arrow
-	color white
-	font-size 3em
-.arrow
-	background rgba(black, 0.1)
-	border-radius 50%
-	width 50px
-	transition background .40s ease-in-out
-.arrow:hover
-	background rgba(white, 0.1)
-	width 60px
-	.slide-arrow
-		font-size 3.5em		
-.arrow-left
-	position absolute
-	top 40%
-	left 0
-.arrow-right
-	position absolute
-	top 40%
-	right 0		
+.relative
+	position relative
+.justify
+	text-align justify
+#section-1
+	background azul_oscuro
+	height 100%
+	.me
+		margin 0
+		height 100%
+		img
+			position absolute
+			bottom 0
+	.box-1
+		padding-top 18.750em
+		padding-left 5.625em
+	.txt-1
+		font-family 'AllanRegular', 'sans-serif'
+		color celeste_claro
+		font-size 3em
+		margin-top 0
+		margin-bottom 0		
+	.txt-2
+		font-family 'FrancoisOne', 'sans-serif'
+		text-shadow 3px 4px #2C5D7E
+		font-size 6.5em
+		color white
+		margin-top 0
+		margin-bottom 0	
+	.shadow
+		box-shadow 0 0 140px 100px rgba(0, 0, 0, 0.6)
+		width 100%
+		height 0
+		animation 3s shadow-profile infinite ease-in-out				
+#section-2
+	height 100%
+	background 	celeste_oscuro
+	background-image url('../img/rain.png'), url('../img/rain3.png'), url('../img/rain2.png')
+	animation rain 20s linear infinite
+	.box-1
+		padding-top 21.875em
+		text-align center
+		.txt-1
+			font-family 'MouseMemoirs', 'sans-serif'
+			color celeste_mas_claro
+			font-size 3.4em
+			margin-top 0
+			margin-bottom -.6em	
+		.txt-cursive
+			font-family 'Satisfy', 'sans-serif'		
+		.txt-2
+			font-family 'LondrinaSolid', 'sans-serif'
+			text-stroke-width 2px
+			-webkit-text-stroke-width 2px
+			-moz-text-stroke-width 2px
+			-o-text-stroke-width 2px
+			-ms-text-stroke-width 2px
+			text-stroke-color #fff
+			-webkit-text-stroke-color #fff
+			-moz-text-stroke-color #fff
+			-o-text-stroke-color #fff
+			-ms-text-stroke-color #fff
+			color white
+			font-size 15em
+			background url(../img/madera-textura.jpg) no-repeat
+			background-clip text
+			-webkit-background-clip text
+			-moz-background-clip text
+			-o-background-clip text
+			-ms-background-clip text
+			text-fill-color transparent
+			-webkit-text-fill-color transparent
+			-moz-text-fill-color transparent
+			-o-text-fill-color transparent
+			-ms-text-fill-color transparent
+			margin-top 0
+			margin-bottom 0
+		.txt-3
+			font-family 'FrancoisOne', 'sans-serif'
+			color celeste_mas_claro
+			font-size 2.5em
+			margin-top -.7em
+			margin-bottom 0	
+			margin-right 3.4em
+			text-align right		
+		.txt-comuna
+			font-family 'AllanBold', 'sans-serif'
+			color #04184D
+	.shadow
+		position absolute
+		bottom 0
+		box-shadow 0 0 140px 100px rgba(255,255,255,0.6)
+		width 100%
+		height 0
+#section-3
+	background whiteSmoke
+	height 100%
+	.box-1
+		padding-top 5em
+		height 50%
+		.txt-1
+			font-family	'Satisfy', 'sans-serif'
+			margin-top 0
+			margin-bottom -.5em	
+			font-size 2.8em
+			padding-left 1em
+		.txt-2
+			color rojo_claro
+			text-shadow 2px 1px #584141
+			font-family	'FrancoisOne', 'sans-serif'
+			font-size 7em
+			margin-top 0
+			margin-bottom 0	
+		.txt-3
+			font-size 2.78em
+			margin-top 0
+			margin-bottom 0
+			padding-left 10.5em
+		.inacap-box
+			height 200px
+			margin-right 11%
+			padding 1.5em
+			img
+				width 22%
+				animation 6s float infinite ease-in-out
+	.box-2
+		margin-left 0
+		margin-bottom 0
+		padding 1em
+		height 50%
+		position absolute
+		bottom 0
+		img
+			position absolute
+			bottom 0
+#section-4
+	background-image radial-gradient(ellipse farthest-side at center, #FFFFFF 0%, #88C44A 100%)
+	height 100%
+	.box-1
+		.txt
+			.txt-1
+				font-family 'SansNarrowBold', 'sans-serif'
+				font-size 6em
+				color white
+				text-shadow rgba(black, 0.2) 0.1em 0.1em 0.1em
+	.info-companies
+		.box-companies
+			padding-top 2em
+			.box-company	
+				background white
+				border 10px solid #EEE
+				box-shadow 0 0 15px 5px rgba(gris_claro, 0.5)
+				margin 3.95em
+				height 40em
+				padding 0	
+				transition height 1s ease-out
+				.website
+					padding .5em
+					height 2em
+					a
+						color white
+						text-decoration none
+				.site-1
+					background azul_mas_oscuro	
+				.site-2
+					background rosado
+				.site-3
+					background rojo_etic										
+				.description
+					p
+						padding 1em
+				.tags
+					position absolute
+					bottom 0
+					text-align center
+					width 100%
+					.tag
+						border-radius 20%
+						color white
+						padding .1em	
+			.company-1:hover
+				animation 3s shadow-company-1 infinite ease-in-out
+			.company-2:hover
+				animation 3s shadow-company-2 infinite ease-in-out
+			.company-3:hover
+				animation 3s shadow-company-3 infinite ease-in-out
+#section-5
+	background rojo_fuerte
+	height 100%
+	.box-1
+		padding-top 24em
+		.txt-1
+			font-family "FrancoisOne", "sans-serif"
+			text-shadow 3px 3px black
+			color white
+			font-size 6em
+	.box-2
+		margin-top 10em
+		.pages
+			background white
+			height 20em
+			margin-bottom 3em
+			border 5px solid rgba(rojo_fuerte, 0.7)
+			border-radius 15%
+			img
+				margin-left 7%
+				margin-top 3%
+		.pages:hover
+			box-shadow 0 0 15px 5px rgba(black, 0.5)
+		.link-web
+			background #7842D8
+			color white
+			text-decoration none
+			padding .5em							
+@keyframes float
+	0%
+		transform translate(0px, 0px)
+	65%
+		transform translate(0px, 30px)	
+	100%
+		transform translate(0px, 0px)												
+@keyframes shadow-profile
+	0%
+		box-shadow 0 0 140px 100px rgba(0, 0, 0, 0.6)
+	50%
+		box-shadow 0 0 200px 100px rgba(0, 0, 0, 0.6)
+	100%
+		box-shadow 0 0 140px 100px rgba(0, 0, 0, 0.6)
+@keyframes shadow-company-1
+	0%
+		box-shadow 0 0 95px 5px rgba(azul_mas_oscuro, 0.5)
+	50%
+		box-shadow 0 0 165px 35px rgba(azul_mas_oscuro, 0.5)
+	100%
+		box-shadow 0 0 95px 5px rgba(azul_mas_oscuro, 0.5)
+@keyframes shadow-company-2
+	0%
+		box-shadow 0 0 95px 5px rgba(rosado, 0.5)
+	50%
+		box-shadow 0 0 165px 35px rgba(rosado, 0.5)
+	100%
+		box-shadow 0 0 95px 5px rgba(rosado, 0.5)
+@keyframes shadow-company-3
+	0%
+		box-shadow 0 0 95px 5px rgba(rojo_etic, 0.5)
+	50%
+		box-shadow 0 0 165px 35px rgba(rojo_etic, 0.5)
+	100%
+		box-shadow 0 0 95px 5px rgba(rojo_etic, 0.5)						
+@keyframes rain 
+	0%
+		background-position 0px 0px
+	100%
+		background-position 500px 1000px, 400px 400px, 300px 300px
+@media screen and (min-width:1900px)
+	#section-1
+		.box-1
+			padding-top 38.750em	
+	#section-2
+		.box-1
+			padding-top 20em				
+@media screen and (max-width:1280px)
+	#section-2
+		.box-1
+			padding-top 9em
+	#section-3 
+		.box-1
+			.txt-1
+				font-size 2em
+				padding-left .8em
+			.txt-2
+				font-size 4.6em
+			.txt-3
+				font-size 1.9em
+				padding-left 10em
+	#section-4
+		height 150%
+		.box-1
+			.txt
+				.txt-1
+					font-size 4em					
+		.info-companies
+			.box-companies
+				.box-company
+					height 30em	
+					margin 2.5em							
+@media screen and (max-width:980px)
+	#section-1
+		height auto
+		.me
+			margin 0
+			height auto
+			img
+				position relative
+				bottom none
+	#section-2
+		.box-1
+			padding-top 30em
+	#section-4
+		background verde_claro
+		height auto					
+		.info-companies
+			.box-companies
+				.box-company
+					height 30em	
+					margin 0 0 8em 0
+					img
+						margin-left 28%
+					.description
+						padding-bottom 4em			
+@media screen and (max-width:800px)
+	#section-3
+		.box-1
+			.txt-1
+				font-size 1.7em
+			.txt-2
+				font-size 4em
+			.txt-3
+				font-size 1.65em
+			.inacap-box
+				margin-top 20%
+				margin-right 25%
+				img
+					width 70%
+	#section-4				
+		.info-companies
+			.box-companies
+				.box-company
+					img
+						margin-left 23%									
+@media screen and (max-width:400px)
+	#section-1
+		height auto
+		.me
+			margin 0
+			height auto
+			img
+				position relative
+				bottom none		
+		.box-1
+			padding-top 5em
+			padding-left 0
+		.txt-2
+			font-size 5em
+	#section-2
+		.box-1
+			padding-top 10em
+			.txt-1
+				font-size 1.5em
+				margin-bottom -.6em
+			.txt-2
+				font-size 6em
+			.txt-3
+				font-size 1.2em
+				margin-right 0
+	#section-3
+		.box-1
+			padding-top 22%
+			.txt-1
+				padding-left .77em
+				font-size 1.15em
+			.txt-2
+				font-size 2.6em
+			.txt-3
+				font-size .9em	
+				padding-left 0
+			.inacap-box
+				margin-top 8%
+				margin-right 30%
+				height 120px
+				img
+					width 100%					
+	#section-4	
+		.box-1
+			.txt
+				.txt-1
+					font-size 3.4em						
+		.info-companies
+			.box-companies
+				.box-company
+					img
+						margin-left 0																							
