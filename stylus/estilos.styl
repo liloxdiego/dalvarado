@@ -63,13 +63,45 @@ azul_oscuro = #31363D
 celeste_claro = #00A3FF
 celeste_mas_claro = #9EDCFF
 celeste_oscuro = #186B99
+celeste = #008DD8
 rojo_claro = rgb(199, 106, 106)
 rojo_etic = #E3003D
 rojo_fuerte = #CC181E
 verde_claro = #88C44A
 gris_claro = #888
+gris = #363636
 azul_mas_oscuro = #0B4B7B
 rosado = #C1348B
+blanco_1 = #E0EBF1
+
+color1 = #0B1C29
+color2 = #4E8D96
+color3 = #70A4A0
+color4 = #97C0B7
+color5 = #C4D7CB
+
+linea1 = #579FAA
+linea2 = #B4CDDD
+linea3 = #AED8D5
+linea4 = #CEE9E3
+linea5 = #505D92
+// color1 = #1D2E4C
+// color2 = #1A5D65
+// color3 = #3C8E77
+// color4 = #9BC585
+// color5 = #D2DB9A
+
+// color1 = #2D313D
+// color2 = #20A28E
+// color3 = #F0563D
+// color4 = #B6C134
+// color5 = #EEF0C2
+
+// color1 = #024959
+// color2 = #037E8C
+// color3 = #F2EFDC
+// color4 = #E74C30
+// color5 = #363636
 
 .center-txt
 	text-align center
@@ -77,9 +109,15 @@ rosado = #C1348B
 	position relative
 .justify
 	text-align justify
+.alert
+	background rojo_fuerte
+	padding 5px
+	color white
+	width 100%
 #section-1
-	background azul_oscuro
+	background color1
 	height 100%
+	border-bottom .5em solid linea1
 	.me
 		margin 0
 		height 100%
@@ -104,20 +142,20 @@ rosado = #C1348B
 		margin-bottom 0	
 	.shadow
 		box-shadow 0 0 140px 100px rgba(0, 0, 0, 0.6)
-		width 100%
 		height 0
-		animation 3s shadow-profile infinite ease-in-out				
+		animation 3s shadow-profile infinite ease-in-out		
 #section-2
 	height 100%
-	background 	celeste_oscuro
+	background 	color2
 	background-image url('../img/rain.png'), url('../img/rain3.png'), url('../img/rain2.png')
 	animation rain 20s linear infinite
+	border-bottom .5em solid linea2
 	.box-1
 		padding-top 21.875em
 		text-align center
 		.txt-1
 			font-family 'MouseMemoirs', 'sans-serif'
-			color celeste_mas_claro
+			color white
 			font-size 3.4em
 			margin-top 0
 			margin-bottom -.6em	
@@ -152,7 +190,7 @@ rosado = #C1348B
 			margin-bottom 0
 		.txt-3
 			font-family 'FrancoisOne', 'sans-serif'
-			color celeste_mas_claro
+			color white
 			font-size 2.5em
 			margin-top -.7em
 			margin-bottom 0	
@@ -160,7 +198,7 @@ rosado = #C1348B
 			text-align right		
 		.txt-comuna
 			font-family 'AllanBold', 'sans-serif'
-			color #04184D
+			color gris
 	.shadow
 		position absolute
 		bottom 0
@@ -168,19 +206,21 @@ rosado = #C1348B
 		width 100%
 		height 0
 #section-3
-	background whiteSmoke
+	background color3
 	height 100%
+	border-bottom .5em solid linea3
 	.box-1
 		padding-top 5em
 		height 50%
 		.txt-1
 			font-family	'Satisfy', 'sans-serif'
+			color gris
 			margin-top 0
 			margin-bottom -.5em	
 			font-size 2.8em
 			padding-left 1em
 		.txt-2
-			color rojo_claro
+			color blanco_1
 			text-shadow 2px 1px #584141
 			font-family	'FrancoisOne', 'sans-serif'
 			font-size 7em
@@ -188,6 +228,7 @@ rosado = #C1348B
 			margin-bottom 0	
 		.txt-3
 			font-size 2.78em
+			color gris
 			margin-top 0
 			margin-bottom 0
 			padding-left 10.5em
@@ -209,8 +250,10 @@ rosado = #C1348B
 			position absolute
 			bottom 0
 #section-4
-	background-image radial-gradient(ellipse farthest-side at center, #FFFFFF 0%, #88C44A 100%)
+	background color4
+	//background-image radial-gradient(ellipse farthest-side at center, #FFFFFF 0%, #88C44A 100%)
 	height 100%
+	border-bottom .5em solid linea4
 	.box-1
 		.txt
 			.txt-1
@@ -229,6 +272,7 @@ rosado = #C1348B
 				height 40em
 				padding 0	
 				transition height 1s ease-out
+				text-align center
 				.website
 					padding .5em
 					height 2em
@@ -260,14 +304,15 @@ rosado = #C1348B
 			.company-3:hover
 				animation 3s shadow-company-3 infinite ease-in-out
 #section-5
-	background rojo_fuerte
+	background color5
 	height 100%
+	border-bottom .5em solid linea5
 	.box-1
 		padding-top 24em
 		.txt-1
 			font-family "FrancoisOne", "sans-serif"
-			text-shadow 3px 3px black
-			color white
+			text-shadow 3px 3px rgba(rojo_fuerte, 0.7)
+			color color1
 			font-size 6em
 	.box-2
 		margin-top 10em
@@ -278,15 +323,69 @@ rosado = #C1348B
 			border 5px solid rgba(rojo_fuerte, 0.7)
 			border-radius 15%
 			img
-				margin-left 7%
 				margin-top 3%
+			.site-info-1
+				height 8.7em
+			.site-info-2
+				height 7.7em	
+			.site-info
+				.description
+					p
+						color #3E3E3E;
+				.tags
+					text-align center
+					.tag
+						color #745C9E
+						font-weight bold
 		.pages:hover
 			box-shadow 0 0 15px 5px rgba(black, 0.5)
-		.link-web
-			background #7842D8
+		.link
+			margin-top 1em
+			a
+				background #7842D8
+				color white
+				text-decoration none
+				padding .5em
+				border-radius 5px
+				border-top-right-radius 5px
+				border-bottom-right-radius 5px
+				box-shadow inset 0 1px 0 #4722A5,0 5px 0 0 #4722A5,0 10px 5px transparent
+#section-6
+	background color1
+	height 100%
+	padding-top 20em
+	.box-1
+		color white
+		font-size 2em
+		font-family "MouseMemoirs", "sans-serif"
+	.box-2
+		a
+			background #C52D2E
 			color white
+			text-shadow 3px 3px black
+			font-family "MouseMemoirs", "sans-serif"
 			text-decoration none
-			padding .5em							
+			font-size 4.5em
+			border-radius 5px
+			border-top-right-radius 5px
+			border-bottom-right-radius 5px
+			box-shadow inset 0 1px 0 #6D0000,0 5px 0 0 #6D0000,0 10px 5px transparent
+			transition background 1s ease-out
+			animation 3s contact-email infinite ease-in-out
+			.span-mail-1
+				padding 1.2em .2em 1.2em .2em
+			.span-mail-2
+				border-radius 0 3px 3px 0
+				padding 0 .2em
+				background #800
+		a:hover
+			background #C95152
+	.shadow
+		box-shadow 0 0 200px 150px rgba(0, 0, 0, 0.6)
+		height 0
+		position absolute
+		top 50%
+		animation 8s shadow-end infinite ease-in-out												
 @keyframes float
 	0%
 		transform translate(0px, 0px)
@@ -321,19 +420,60 @@ rosado = #C1348B
 	50%
 		box-shadow 0 0 165px 35px rgba(rojo_etic, 0.5)
 	100%
-		box-shadow 0 0 95px 5px rgba(rojo_etic, 0.5)						
+		box-shadow 0 0 95px 5px rgba(rojo_etic, 0.5)
+@keyframes shadow-end
+	0%
+		box-shadow 0 0 200px 150px rgba(0, 0, 0, 0.6)
+	50%
+		box-shadow 0 0 300px 250px rgba(0, 0, 0, 0.6)
+	100%
+		box-shadow 0 0 200px 150px rgba(0, 0, 0, 0.6)								
 @keyframes rain 
 	0%
 		background-position 0px 0px
 	100%
 		background-position 500px 1000px, 400px 400px, 300px 300px
-@media screen and (min-width:1900px)
+@keyframes contact-email
+	0%
+		background #C52D2E
+	60%
+		background #800
+	100%
+		background #C52D2E
+/*@media screen and (min-width:1900px)
 	#section-1
 		.box-1
 			padding-top 38.750em	
 	#section-2
 		.box-1
-			padding-top 20em				
+			padding-top 20em*/
+@media screen and (min-width:1349px), screen and (min-height:650px)
+	#section-2
+		.box-1
+			padding-top 10em
+	#section-4
+		height auto				
+		.info-companies
+			.box-companies
+				padding-top 0
+				.box-company
+					margin-left 2.5em
+	#section-5
+		height auto
+		.box-1
+			padding-top 15em
+		.box-2
+			margin-top 2em
+			.pages
+				height 22em
+				img
+					margin-left 0
+				.site-info-1
+					height 11em
+				.site-info-2
+					height 10em
+	#section-6
+		padding-top 10em																					
 @media screen and (max-width:1280px)
 	#section-2
 		.box-1
@@ -358,7 +498,66 @@ rosado = #C1348B
 			.box-companies
 				.box-company
 					height 30em	
-					margin 2.5em							
+					margin 2.5em
+	#section-5
+		height auto
+		.box-2
+			.pages
+				border-radius 2em
+				height 22em	
+				.site-info-1
+					height 11em
+				.site-info-2
+					height 10em	
+	#section-6
+		.box-2
+			a
+				font-size 3.5em												
+@media screen and (width:1024px), screen and (height: 482px)
+	#section-1
+		height 100%
+		position relative
+		.box-1
+			padding-top 1em
+			padding-left 1em
+			.txt-2
+				font-size 7em
+		.me
+			img
+				position absolute
+				top 0
+				bottom 5em
+				right 0
+				width 40%
+	#section-2
+		.box-1
+			margin-top 3em
+			padding-top 4em
+	#section-3
+		.box-2
+			img
+				width 30em
+	#section-4
+		height auto
+		.info-companies
+			.box-companies
+				.box-company
+					margin-left 0
+					margin-bottom 3em
+	#section-5
+		height auto
+		.box-1
+			padding-top 0
+		.box-2
+			margin-top 0	
+			.pages
+				border-radius 2em
+				.site-info-1
+					height 7em
+				.site-info-2
+					height 6em
+	#section-6
+		padding-top 5em																		
 @media screen and (max-width:980px)
 	#section-1
 		height auto
@@ -379,10 +578,23 @@ rosado = #C1348B
 				.box-company
 					height 30em	
 					margin 0 0 8em 0
-					img
-						margin-left 28%
 					.description
-						padding-bottom 4em			
+						padding-bottom 4em
+	#section-5
+		.box-1
+			padding-top 5em
+		.box-2
+			.pages
+				border-radius 2em
+				.site-info-1
+					height 6em
+				.site-info-2
+					height 5em
+	#section-6
+		padding-top 30em
+		.box-2
+			a
+				font-size 3em														
 @media screen and (max-width:800px)
 	#section-3
 		.box-1
@@ -397,12 +609,10 @@ rosado = #C1348B
 				margin-right 25%
 				img
 					width 70%
-	#section-4				
-		.info-companies
-			.box-companies
-				.box-company
-					img
-						margin-left 23%									
+	#section-6
+		.box-2
+			a
+				font-size 2em													
 @media screen and (max-width:400px)
 	#section-1
 		height auto
@@ -454,4 +664,26 @@ rosado = #C1348B
 			.box-companies
 				.box-company
 					img
-						margin-left 0																							
+						margin-left 0
+	#section-5
+		height auto
+		.box-1
+			padding-top 2em
+			.txt-1
+				font-size 2.2em
+		.box-2
+			padding-top 0
+			.pages
+				border-radius 2em
+				.site-info-1
+					height 11em
+				.site-info-2
+					height 10em	
+	#section-6
+		padding-top 0
+		.box-2
+			padding 0
+			a
+				font-size 2em
+		.shadow
+			top 40%																																										
